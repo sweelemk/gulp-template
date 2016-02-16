@@ -17,20 +17,20 @@ var gulp = require('gulp'),
 
 var path = {
     build: {
-        html: 'bitrix/templates/',
-        js: 'bitrix/templates/js/',
-        jsLibs: 'bitrix/templates/js/partials',
-        css: 'bitrix/templates/css',
-        img: 'bitrix/templates/img/',
-        svg: 'bitrix/templates/img/svg',
-        icons: 'bitrix/templates/img/icons',
-        fonts: 'bitrix/templates/fonts/'
+        html: 'bitrix/templates/main/',
+        js: 'bitrix/templates/main/js/',
+        jsLibs: 'bitrix/templates/main/js/partials',
+        css: 'bitrix/templates/main/css',
+        img: 'bitrix/templates/main/img/',
+        svg: 'bitrix/templates/main/img/svg',
+        icons: 'bitrix/templates/main/img/icons',
+        fonts: 'bitrix/templates/main/fonts/'
     },
     src: {
         html: 'src/*.html',
         js: 'src/js/**/*.js',
         css: 'src/css/*.*',
-        sass: 'src/sass/*.scss',
+        sass: 'src/sass/screen.scss',
         img: 'src/img/**/*.*',
         svg: 'src/svg/*.svg',
         icons: 'src/img/icons/*.png',
@@ -46,12 +46,12 @@ var path = {
         icons: 'src/img/icons/*.png',
         fonts: 'src/fonts/**/*.*'
     },
-    clean: './bitrix/templates'
+    clean: './bitrix/templates/main'
 };
 
 var config = {
     server: {
-        baseDir: "./bitrix/templates"
+        baseDir: "./bitrix/templates/main"
     },
     tunnel: false,
     host: 'localhost',
@@ -114,7 +114,7 @@ gulp.task('sprite:build', function() {
                 }
             }));
 
-    spriteData.img.pipe(gulp.dest('bitrix/templates/img/'));
+    spriteData.img.pipe(gulp.dest('bitrix/templates/main/img/'));
     spriteData.css.pipe(gulp.dest('./src/sass/partials/')); 
 });
 
