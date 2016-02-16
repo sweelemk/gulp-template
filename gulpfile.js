@@ -19,7 +19,7 @@ var path = {
     build: {
         html: 'bitrix/templates/main/',
         js: 'bitrix/templates/main/js/',
-        jsLibs: 'bitrix/templates/main/js/partials',
+        jsLibs: 'bitrix/templates/main/js/lib',
         css: 'bitrix/templates/main/css',
         img: 'bitrix/templates/main/img/',
         svg: 'bitrix/templates/main/img/svg',
@@ -115,7 +115,7 @@ gulp.task('sprite:build', function() {
             }));
 
     spriteData.img.pipe(gulp.dest('bitrix/templates/main/img/'));
-    spriteData.css.pipe(gulp.dest('./src/sass/partials/')); 
+    spriteData.css.pipe(gulp.dest('./src/sass/lib/')); 
 });
 
 gulp.task('image:build', function () {
