@@ -17,6 +17,6 @@
     "gulp-uglify": "*",
     "gulp-watch": "*",
     "imagemin-pngquant": "*",
-    "rimraf": "*",
+    "rimraf": "*"
   }
 }
